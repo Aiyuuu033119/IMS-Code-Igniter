@@ -9,7 +9,7 @@
     <!-- Font Icon -->
     <title>LMS - Login</title>
   <!-- Favicon -->
-  <link rel="icon" href="<?php echo base_url();?>assets/img/brand/favicon.png" type="image/png">
+  <link rel="icon" href="<?php echo base_url();?>/assets/img/brand/icon.png" type="image/png">
   <!-- Fonts -->
   <link rel="stylesheet" href="<?php echo base_url();?>https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
