@@ -193,7 +193,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           hasError = true;
         }
 
-        if(name=='<?php echo $data->name?>'&&email=='<?php echo $data->email?>'&&pass=='admin123'){
+        var compareName = '<?php echo $data->name?>'; 
+        var compareEmail = '<?php echo $data->email?>'; 
+
+        if(name==compareName&&email==compareEmail&&pass=='admin123'&&box==false){
           return false;
         }
 
@@ -228,6 +231,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $('.password').attr('disabled',true)
                 $('.password').val('**********');
                 $('.success-text').text('Successfully Updated!');
+                compareName = name;
+                compareEmail = email;
                 $('#success-modal').modal('show')
               }
               else if(json.msg=='error'){
