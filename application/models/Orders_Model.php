@@ -13,7 +13,6 @@ class Orders_Model extends CI_Model {
             $this->db->like('name', $match);
             // $this->db->or_like('date', $date);
         }
-        
         $this->db->order_by('id', 'DESC');
         $this->db->order_by('date', 'DESC');
         $this->db->order_by('time', 'DESC');

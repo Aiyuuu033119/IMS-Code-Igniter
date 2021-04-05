@@ -26,13 +26,7 @@ class Reports extends CI_Controller {
 		parent::__construct();
 
         $this->load->helper('url');
-		$this->load->model('Issue_Model', 'issue');
-        $this->load->model('Book_Model', 'book');
-        $this->load->model('Return_Model', 'return');
-        $this->load->model('Categories_Model', 'class');
-        $this->load->model('Students_Model', 'student');
         $this->load->model('Admin_Model', 'admin');
-        $this->load->model('Reports_Model', 'reports');
 
 		// new models
 		$this->load->model('Stock_Model', 'stock');
@@ -144,7 +138,7 @@ class Reports extends CI_Controller {
 		$sheet->setCellValue('D1', 'Time');
 		$sheet->setCellValue('E1', 'Date');
 		
-		$info = $this->orders->get('invent_table', $date);
+		$info = $this->orders->get('invent_table', array('date' => $date), '');
 		$start = 2;
 		
         foreach($info as $d){
@@ -194,7 +188,7 @@ class Reports extends CI_Controller {
 		$sheet->setCellValue('B1', 'Quabtity');
 		$sheet->setCellValue('C1', 'Total');
 		
-		$info = $this->inventory->get('invent_table',$date);
+		$info = $this->inventory->get('invent_table', $date, '');
 		$start = 2;
 		
         foreach($info as $d){
@@ -241,7 +235,8 @@ class Reports extends CI_Controller {
 		$sheet->setCellValue('B1', 'Email');
 		$sheet->setCellValue('C1', 'Status');
 		
-		$info = $this->reports->get('user_table');
+
+		$info = $this->admin->get('user_table','');
 		$start = 2;
 		
         foreach($info as $d){
