@@ -14,8 +14,8 @@ class Inventory extends CI_Controller {
   public  function inventorylist()
   {
         $date = $this->uri->segment(3);
-        $match = $this->uri->segment(3);
-        $info = $this->inventory->get('invent_table', $date, $match);
+        $match = $this->uri->segment(4);
+        $info = $this->inventory->get('invent_table', array('date' => $date), $match);
         echo json_encode($info);
   }
 

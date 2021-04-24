@@ -160,7 +160,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $(this).attr("disabled", "disabled");
             query = $(this).val();
 
-            inventory(query);
+            inventory(date, query);
 
             //Enable the textbox again if needed.
             $(this).removeAttr("disabled");
@@ -168,7 +168,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       })
 
       $('#select1').on('change', function () {
-        inventory($(this).val());
+        date = $(this).val();
+        inventory($(this).val(),'');
       });
 
     });

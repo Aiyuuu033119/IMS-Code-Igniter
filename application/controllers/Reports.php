@@ -188,7 +188,7 @@ class Reports extends CI_Controller {
 		$sheet->setCellValue('B1', 'Quabtity');
 		$sheet->setCellValue('C1', 'Total');
 		
-		$info = $this->inventory->get('invent_table', $date, '');
+		$info = $this->inventory->get('invent_table', array('date' => $date), '');
 		$start = 2;
 		
         foreach($info as $d){

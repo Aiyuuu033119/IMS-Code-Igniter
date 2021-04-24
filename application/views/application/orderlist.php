@@ -271,6 +271,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       })
 
       $('#select1').on('change', function () {
+        date = $(this).val();
+
         orders($(this).val(),'');
       });
 

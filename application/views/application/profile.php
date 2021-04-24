@@ -255,7 +255,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
         else{
           $('.password').attr('disabled',true)
-          $('.password').val('**********');
+          $('.password').val('admin123');
         }
       });
     });
