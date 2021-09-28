@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>LMS - <?php echo $title?></title>
+  <title>IMS - <?php echo $title?></title>
   <!-- Favicon -->
   <link rel="icon" href="<?php echo base_url();?>/assets/img/brand/icon.png" type="image/png">
   <!-- Fonts -->
